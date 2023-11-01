@@ -220,6 +220,12 @@ impl TopologyObject {
     }
 }
 
+impl fmt::Debug for TopologyObject {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self)
+    }
+}
+
 impl fmt::Display for TopologyObject {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let type_str = CString::new("").unwrap();
