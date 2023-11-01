@@ -1,4 +1,4 @@
-use ffi;
+use crate::ffi;
 use libc::c_char;
 use std::clone::Clone;
 use std::ffi::CStr;

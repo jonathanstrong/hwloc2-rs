@@ -2,10 +2,10 @@ use libc::{c_int, c_uint, c_ulonglong, c_char, c_void, c_float, c_ushort, c_ucha
 use std::ffi::CString;
 use std::fmt;
 
-use ffi::ObjectType;
-use ffi;
+use crate::ffi::ObjectType;
+use crate::ffi;
 
-use bitmap::{IntHwlocBitmap, CpuSet, NodeSet};
+use crate::bitmap::{IntHwlocBitmap, CpuSet, NodeSet};
 
 #[repr(C)]
 pub struct TopologyObject {

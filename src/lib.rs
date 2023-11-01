@@ -91,11 +91,11 @@ mod topology_object;
 mod bitmap;
 mod support;
 
-pub use ffi::{ObjectType, TypeDepthError, TopologyFlag, CpuBindFlags, MemBindPolicy};
-pub use bitmap::{Bitmap, CpuSet, NodeSet};
-pub use support::{TopologySupport, TopologyDiscoverySupport, TopologyCpuBindSupport,
+pub use crate::ffi::{ObjectType, TypeDepthError, TopologyFlag, CpuBindFlags, MemBindPolicy};
+pub use crate::bitmap::{Bitmap, CpuSet, NodeSet};
+pub use crate::support::{TopologySupport, TopologyDiscoverySupport, TopologyCpuBindSupport,
                   TopologyMemBindSupport};
-pub use topology_object::{TopologyObject, TopologyObjectMemory};
+pub use crate::topology_object::{TopologyObject, TopologyObjectMemory};
 
 use num::{ToPrimitive, FromPrimitive};
 use errno::errno;
