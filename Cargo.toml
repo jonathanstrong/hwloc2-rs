@@ -10,7 +10,7 @@ documentation = "http://docs.rs/hwloc2/2.2.0/hwloc2"
 build = "build.rs"
 links = "hwloc"
 readme = "README.md"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 libc = "0.2"
