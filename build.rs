@@ -100,6 +100,17 @@ fn install_hwloc_cmake(_source_path: impl AsRef<Path>) {
 fn install_hwloc_autotools(source_path: impl AsRef<Path>) {
     // Build using autotools
     let mut config = autotools::Config::new(source_path);
+
+    config
+        .config_option("config-cache", None)
+        .disable("cuda", None)
+        .disable("cairo", None)
+        .disable("picky", None)
+        .disable("rsmi", None)
+        .disable("nvml", None)
+        .disable("gl", None)
+        .disable("readme", None);
+
     if cfg!(target_os = "macos") {
         // macOS really doesn't like static builds...
         config.disable_static();
